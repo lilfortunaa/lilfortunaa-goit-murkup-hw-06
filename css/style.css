@@ -331,10 +331,20 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/bg/people-office.jpg);
+    url(../images/bg/bg-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media screen and (max-width: 767px) and (min-resolution: 2x) {
+  .order {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg/bg-mobile@2x.jpg);
+  }
 }
 
 .order-text {
@@ -370,15 +380,14 @@ button {
 @media screen and (min-width: 768px) {
   .order {
     background-color: #2e2f42;
-    padding-top: 112x;
-    padding-bottom: 112px;
+    padding: 112px 0;
     max-width: 768px;
     margin: 0 auto;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/bg/people-office.jpg);
+      url(../images/bg/bg-tablet.jpg);
   }
   .order-text {
     max-width: 496px;
@@ -403,11 +412,27 @@ button {
     border-radius: 4px;
   }
 }
+
+@media screen and (min-width: 768px) and (min-resolution: 2x) {
+  .order {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg/bg-tablet@2x.jpg);
+  }
+}
+
 @media screen and (min-width: 1158px) {
   .order {
     padding-top: 188px;
     padding-bottom: 188px;
     max-width: 1440px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg/bg-desk.jpg);
   }
 
   .order-button {
@@ -433,6 +458,16 @@ button {
     color: #fff;
     margin: 0 auto 48px;
     box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width: 1158px) and (min-resolution: 2x) {
+  .order {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg/bg-desk@2x.jpg);
   }
 }
 /* #endregion subtitle */
