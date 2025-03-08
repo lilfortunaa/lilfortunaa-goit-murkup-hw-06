@@ -720,9 +720,7 @@ button {
   border-left: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
 }
-.overlay {
-  display: none;
-}
+
 .portfolio-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
@@ -762,6 +760,10 @@ button {
   margin-bottom: 8px;
 }
 
+.overlay {
+  visibility: hidden;
+}
+
 @media screen and (min-width: 768px) {
   .portfolio-item {
     max-width: 356px;
@@ -779,6 +781,10 @@ button {
 
   .team-cont {
     margin-bottom: 8px;
+  }
+
+  .overlay {
+    visibility: hidden;
   }
 }
 
@@ -807,7 +813,7 @@ button {
   }
 
   .overlay {
-    display: auto;
+    visibility: visible;
     position: absolute;
     top: 0;
     left: 0;
