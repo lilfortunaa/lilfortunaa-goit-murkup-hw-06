@@ -970,7 +970,6 @@ button {
   }
   .footer-logo {
     display: inline-block;
-    margin-bottom: 16px;
   }
 
   .footer-logo .logo-part {
@@ -1058,15 +1057,14 @@ button {
     letter-spacing: 0.02em;
     color: #fff;
     max-width: 264px;
-    margin-bottom: 16px;
   }
 
   .footer-container {
     width: 1158px;
     display: flex;
     flex-wrap: nowrap;
-
     align-items: baseline;
+    gap: unset;
   }
   .footer-item {
     padding-left: 0;
