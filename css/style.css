@@ -37,7 +37,6 @@ button {
 .container {
   max-width: 320px;
   padding: 0 16px;
-  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -271,18 +270,18 @@ button {
 }
 .mobile-contacts {
   font-style: normal;
-  margin-left: auto;
 }
 
 .mobile-contacts-link {
   display: block;
-  padding: 24px 0;
+  margin: 24px 0;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #434455;
 }
+
 .mobile {
   color: #404bbf;
 }
@@ -297,8 +296,8 @@ button {
 }
 
 .mobile-icon-link {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -392,6 +391,7 @@ button {
   .order-text {
     max-width: 496px;
     height: 120px;
+    font-size: 56px;
     align-items: center;
     margin: 0 auto 36px;
   }
@@ -495,6 +495,9 @@ button {
 .item-list {
   margin-bottom: 72px;
 }
+.item-list:last-child {
+  margin-bottom: 0px;
+}
 .rectangle {
   display: none;
 }
@@ -507,7 +510,7 @@ button {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  padding: 8px;
+  margin-bottom: 10px;
 }
 .item-text {
   font-weight: 500;
@@ -520,7 +523,7 @@ button {
   .item-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 72px 24px;
   }
 
   .item-list {
@@ -607,6 +610,9 @@ button {
   margin-bottom: 72px;
 }
 
+.team-section:last-child {
+  margin-bottom: auto;
+}
 .team-cont {
   padding: 32px 0;
 }
@@ -658,12 +664,13 @@ button {
   .team-section {
     max-width: 264px;
     width: calc((100% - 48px) / 2);
+    margin: 0px;
   }
   .team-info {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
+    gap: 64px 24px;
   }
 }
 
@@ -740,6 +747,9 @@ button {
 .portfolio-item {
   margin-bottom: 48px;
 }
+.portfolio-item:last-child {
+  margin-bottom: 0px;
+}
 .app-name {
   font-weight: 500;
   font-size: 20px;
@@ -761,22 +771,22 @@ button {
 }
 
 .overlay {
-  visibility: hidden;
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
   .portfolio-item {
     max-width: 356px;
     width: calc((100% - 48px) / 2);
-    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     background: #fff;
+    margin: 0px;
   }
 
   .portfolio-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
+    gap: 72px 24px;
   }
 
   .team-cont {
@@ -784,7 +794,7 @@ button {
   }
 
   .overlay {
-    visibility: hidden;
+    display: none;
   }
 }
 
@@ -803,17 +813,9 @@ button {
     width: calc((100% - 48px) / 3);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .portfolio-item:hover .overlay {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-  .portfolio-item:hover {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  }
 
   .overlay {
-    visibility: visible;
+    display: inherit;
     position: absolute;
     top: 0;
     left: 0;
@@ -827,6 +829,14 @@ button {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     line-height: 1.5;
     letter-spacing: 0.02em;
+  }
+  .portfolio-item:hover .overlay {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  .portfolio-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   }
 }
 
@@ -845,7 +855,9 @@ button {
   background-color: #2e2f42;
   padding: 96px 0;
 }
-
+.footer-item {
+  margin-bottom: 72px;
+}
 .footer-text {
   font-weight: 400;
   font-size: 16px;
@@ -853,9 +865,10 @@ button {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   margin-top: 16px;
+}
+.footer-social-cont {
   margin-bottom: 72px;
 }
-
 .footer-text-social {
   display: flex;
   align-items: center;
@@ -865,15 +878,13 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
-.footer-social-cont {
-  margin-bottom: 72px;
-}
+
 .icon-list-footer {
   display: flex;
+  justify-content: center;
   gap: 16px;
-  margin: 0 56px;
 }
 
 .icon-item-footer {
@@ -956,7 +967,6 @@ button {
     letter-spacing: 0.02em;
     color: #fff;
     max-width: 264px;
-    margin-bottom: 16px;
   }
   .footer-logo {
     display: inline-block;
@@ -967,8 +977,8 @@ button {
     color: #f4f4fd;
   }
   .footer-item {
-    padding-left: 108px;
     align-items: center;
+    margin: 0px;
   }
   .footer-text-social {
     font-weight: 500;
@@ -979,16 +989,17 @@ button {
     margin-right: auto;
   }
   .footer-social-cont {
-    min-width: 208px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 24px;
   }
 
   .footer-container {
+    width: 584px;
     display: flex;
     flex-wrap: wrap;
+    gap: 72px 24px;
+    margin: 0 auto;
   }
   .icon-list-footer {
     display: flex;
@@ -997,7 +1008,6 @@ button {
   }
 
   .subscribe-container {
-    padding-left: 108px;
     flex-direction: column;
   }
   .subscribe-form {
@@ -1034,8 +1044,6 @@ button {
     opacity: 0.6;
     border-radius: 4px;
     color: #ffffff;
-    margin-top: 16px;
-    margin-bottom: 16px;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -1054,8 +1062,10 @@ button {
   }
 
   .footer-container {
+    width: 1158px;
     display: flex;
     flex-wrap: nowrap;
+
     align-items: baseline;
   }
   .footer-item {
@@ -1079,7 +1089,7 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .subscribe-container {
-    padding-left: 80px;
+    margin-left: 80px;
     flex-wrap: nowrap;
   }
 
